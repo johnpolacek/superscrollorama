@@ -36,7 +36,7 @@
 
 		function init() {
 			// set event handlers
-			$window.scroll(function() {
+			$window.on('scroll',function() {
 				doUpdateOnNextTick = true;
 			});
 			TweenLite.ticker.addEventListener("tick", tickHandler);
