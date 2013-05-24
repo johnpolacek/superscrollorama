@@ -80,9 +80,11 @@
 			}
 		}
 
-		function checkScrollAnim() {
-			var currScrollPoint = superscrollorama.settings.isVertical ? $window.scrollTop() + scrollContainerOffset.y :  $window.scrollLeft() + scrollContainerOffset.x;
-			var offsetAdjust = superscrollorama.settings.triggerAtCenter ? (superscrollorama.settings.isVertical ? -$window.height()/2 : -$window.width()/2) : 0;
+	function checkScrollAnim() {
+
+
+            		var currScrollPoint = superscrollorama.settings.isVertical ? $window.scrollTop() + scrollContainerOffset.y :  $window.scrollLeft() + scrollContainerOffset.x;
+			var offsetAdjust = superscrollorama.settings.triggerAtCenter ? (superscrollorama.settings.isVertical ? - $window.height()/2 : - $window.width()/2) : 0;
 			var i, startPoint, endPoint;
 
 			// check all animObjects
@@ -164,11 +166,12 @@
 
 				// should object be pinned (or updated)?
 				if (pinObj.state != 'PINNED') {
+                    var pinObjSpacerOffset = pinObj.spacer.offset();
 
-					if (pinObj.state === 'UPDATE') resetPinObj(pinObj); // revert to original Position so startPoint and endPoint will be calculated to the correct values
+                    if (pinObj.state === 'UPDATE') resetPinObj(pinObj); // revert to original Position so startPoint and endPoint will be calculated to the correct values
 
 
-					startPoint = superscrollorama.settings.isVertical ? pinObj.spacer.offset().top + scrollContainerOffset.y : pinObj.spacer.offset().left + scrollContainerOffset.x;
+					startPoint = superscrollorama.settings.isVertical ? pinObjSpacerOffset.top + scrollContainerOffset.y : pinObjSpacerOffset.left + scrollContainerOffset.x;
 
 					startPoint += pinObj.offset;
 
@@ -189,8 +192,8 @@
 						};
 						// change to fixed position
 						pinObj.fixedPositioning = {
-							top: superscrollorama.settings.isVertical ? -pinObj.offset : pinObj.spacer.offset().top,
-							left: superscrollorama.settings.isVertical ? pinObj.spacer.offset().left : -pinObj.offset
+							top: superscrollorama.settings.isVertical ? -pinObj.offset : pinObjSpacerOffset.top,
+							left: superscrollorama.settings.isVertical ? pinObjSpacerOffset.left : -pinObj.offset
 						};
 						el.css('position','fixed');
 						el.css('top', pinObj.fixedPositioning.top);
@@ -391,7 +394,7 @@
 			}
 			
 			return superscrollorama;
-		}
+		};
 		
 		superscrollorama.removePin = function (el, reset) {
 			if (typeof(el) === 'string') el = $(el);
@@ -414,7 +417,7 @@
 			}
 			
 			return superscrollorama;
-		}
+		};
 
 		superscrollorama.setScrollContainerOffset = function (x, y) {
 			scrollContainerOffset.x = x;
@@ -432,10 +435,13 @@
 		};
 
 
+
 		// INIT
 		init();
 
 		return superscrollorama;
+
+
 	};
 
 })(jQuery);
