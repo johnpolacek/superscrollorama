@@ -83,8 +83,9 @@
 		}
 
 		function checkScrollAnim() {
-
-			var currScrollPoint = superscrollorama.settings.isVertical ? $window.scrollTop() + scrollContainerOffset.y :  $window.scrollLeft() + scrollContainerOffset.x;
+			
+			var scrollTop = ($window.scrollTop() === 0) ? -1 : $window.scrollTop();
+			var currScrollPoint = superscrollorama.settings.isVertical ? scrollTop + scrollContainerOffset.y :  $window.scrollLeft() + scrollContainerOffset.x;
 			var offsetAdjust = superscrollorama.settings.triggerAtCenter ? (superscrollorama.settings.isVertical ? - $window.height()/2 : - $window.width()/2) : 0;
 			var i, startPoint, endPoint;
 
