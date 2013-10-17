@@ -84,8 +84,7 @@
 
 		function checkScrollAnim() {
 			
-			var scrollTop = ($window.scrollTop() === 0) ? -1 : $window.scrollTop();
-			var currScrollPoint = superscrollorama.settings.isVertical ? scrollTop + scrollContainerOffset.y :  $window.scrollLeft() + scrollContainerOffset.x;
+			var currScrollPoint = superscrollorama.settings.isVertical ? $window.scrollTop() + scrollContainerOffset.y :  $window.scrollLeft() + scrollContainerOffset.x;
 			var offsetAdjust = superscrollorama.settings.triggerAtCenter ? (superscrollorama.settings.isVertical ? - $window.height()/2 : - $window.width()/2) : 0;
 			var i, startPoint, endPoint;
 
@@ -184,7 +183,7 @@
 					endPoint = startPoint + pinObj.dur;
 
 					var jumpedPast = ((currScrollPoint > endPoint && pinObj.state === 'BEFORE') || (currScrollPoint < startPoint && pinObj.state === 'AFTER')); // if we jumped past a pinarea (i.e. when refreshing or using a function) we need to temporarily pin the element so it gets positioned to start or end respectively
-					var inPinAra = (currScrollPoint > startPoint && currScrollPoint < endPoint);
+					var inPinAra = (currScrollPoint >= startPoint && currScrollPoint <= endPoint);
 					if (inPinAra || jumpedPast) {
 						// set original position values for unpinning
 						if (pinObj.pushFollowers && el.css('position') === "static") { // this can't be. If we want to pass following elements we need to at least allow relative positioning
