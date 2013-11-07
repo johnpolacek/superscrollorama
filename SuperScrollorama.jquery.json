@@ -7,7 +7,11 @@
         "scrolling",
         "animation"
     ],
+<<<<<<< Updated upstream
     "version": "1.0.1",
+=======
+    "version": "1.0.2",
+>>>>>>> Stashed changes
     "author": {
         "name": "John Polacek",
         "url": "http://johnpolacek.com"
