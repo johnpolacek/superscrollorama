@@ -1,7 +1,7 @@
 {
   "name": "SuperScrollorama",
   "description": "The jQuery plugin for supercool scroll animation",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "homepage": "http://johnpolacek.github.io/superscrollorama/",
   "author": {
     "name": "John Polacek",
