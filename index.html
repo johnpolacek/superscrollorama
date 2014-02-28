@@ -14,6 +14,13 @@
 	<a href="https://github.com/johnpolacek/superscrollorama">
 		<img style="position: absolute; top: 0; right: 0; border: 0; z-index: 999999999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" alt="Fork me on GitHub" />
 	</a>
+
+	<div id="newversion">
+		<a href="http://janpaepke.github.io/ScrollMagic/">
+		<h2>New Version</h2>
+		<span>Click here to find out more!</span>
+		</a>
+	</div>
 	
 	<div id="intro">
 		<h1 id="title">
@@ -381,6 +388,9 @@ controller.addTween('#fade',
 	<script src="js/jquery.superscrollorama.js"></script>
 	<script>
 		$(document).ready(function() {
+			// set rotation of flash
+			TweenMax.set("#newversion", {rotation: 15});
+
 			$('body').css('visibility','visible');
 
 			// hide content until after title animation
@@ -402,6 +412,7 @@ controller.addTween('#fade',
 					TweenMax.from( $('#title-line3 .char4'), .25+Math.random(), {css:{top: '-200px', left:'1000px'}, ease:Elastic.easeOut}),
 					TweenMax.from( $('#title-line3 .char5'), .25+Math.random(), {css:{top: '200px', left:'1000px'}, ease:Elastic.easeOut})
 				])
+				.from("#newversion", .4, {scale: 5, autoAlpha: 0, ease: Elastic.easeOut})
 				.to( $('#title-info'), .5, {css:{opacity:.99, 'margin-top':0}, delay:-1, ease:Quad.easeOut});
 			
 			function initScrollAnimations() {
