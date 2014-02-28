@@ -211,9 +211,9 @@
 						// If we want to push down following Items we need a spacer to do it, while and after our element is fixed.
 						if (pinObj.pushFollowers) {
 							if (superscrollorama.settings.isVertical) {
-									pinObj.spacer.height(pinObj.dur + el.outerHeight());
+									pinObj.spacer.height(pinObj.dur + el.outerHeight(true));
 							} else {
-									pinObj.spacer.width(pinObj.dur + el.outerWidth());
+									pinObj.spacer.width(pinObj.dur + el.outerWidth(true));
 							}
 						} else {
 							if (pinObj.origPositioning.pos === "absolute") { // no spacer
@@ -221,9 +221,9 @@
 								pinObj.spacer.height(0);
 							} else { // spacer needs to reserve the elements space, while pinned
 								if (superscrollorama.settings.isVertical) {
-									pinObj.spacer.height(el.outerHeight());
+									pinObj.spacer.height(el.outerHeight(true));
 								} else {
-									pinObj.spacer.width(el.outerWidth());
+									pinObj.spacer.width(el.outerWidth(true));
 								}
 							}
 						}

@@ -274,3 +274,33 @@ blockquote {
 .mobile-demo h3 {
 	color:#C5C3DE;
 }
+
+#newversion {
+	position: absolute;
+	top: 230px;
+	left: 50%;
+	margin-left: 250px;
+	z-index: 100;
+	background-color: #D92B00;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	box-shadow: 0 2px 1px #000;
+}
+#newversion h2 {
+	font-size: 43px;
+	margin: 0;
+	padding: 30px 0px 0px 0px;
+	color: #FFFFFF;
+	font-style: normal;
+}
+#newversion a {
+	text-decoration: none;
+	padding: 0px 20px 20px 20px;
+	display: block;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+#newversion a:hover span {
+	text-decoration: underline;
+}
