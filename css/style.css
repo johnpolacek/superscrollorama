@@ -58,7 +58,7 @@ h3 {
 	text-transform: uppercase;	
 }
 
-p {	width: 80%; margin: 20px auto; text-shadow: 0 2px 1px #000; color: #C5C3DE; }
+p {	width: 80%; margin: 20px auto; text-shadow: 0 2px 1px #000; color: #C5C3DE; line-height: 1.4; }
 a, a:visited { 
 	color: #FFB000; 
 	font-weight: bold; 
