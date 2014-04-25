@@ -59,11 +59,19 @@ h3 {
 }
 
 p {	width: 80%; margin: 20px auto; text-shadow: 0 2px 1px #000; color: #C5C3DE; }
-a, a:visited { color: #D92B00; font-weight: bold; font-style: italic; }
-ul { list-style: none; }
-
+a, a:visited { 
+	color: #FFB000; 
+	font-weight: bold; 
+	font-style: italic;
+	text-decoration: none;
+	border-bottom: dotted 1px #FFB000;
+}
+figure > a, #newversion a {
+	border-bottom: none;
+}
 figcaption { text-shadow: 0 2px 1px #000; color: #C5C3DE; }
 
+ul { list-style: none; }
 .download { padding: 10px; }
 
 pre { font-size: 15px; }
@@ -118,7 +126,7 @@ blockquote {
 	margin: 10px auto;
 	text-align: center;
 	font-style: italic;
-	color: #D92B00;
+	color: #69697A;
 	z-index:100;
 }
 
@@ -132,7 +140,7 @@ blockquote {
 }
 #hire { margin-bottom: 80px; }
 
-#download a { color: #69697A; }
+#download a { color: #69697A; border-bottom: none; text-decoration: underline; }
 
 #examples-1 { overflow: hidden; }
 #fly-it { position: relative; }
@@ -244,7 +252,11 @@ blockquote {
 	font-style: italic;
 }
 
-#credits { padding: 80px 0; }
+#credits { 
+	max-width: 860px;
+	margin: 0 auto;
+	padding: 80px 0; 
+}
 
 /* mobile demo */
 
