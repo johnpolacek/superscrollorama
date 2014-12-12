@@ -4,6 +4,14 @@ The jQuery plugin for doing supercool scroll animation.
 
 Check out the [Project Page](http://johnpolacek.github.com/superscrollorama) for more information.
 
+## IMPORTANT INFORMATION:
+### Superscrollorama has been replaced by ScrollMagic
+Check out ScrollMagic [here](http://janpaepke.github.io/ScrollMagic/) or visit it on GitHub: https://github.com/janpaepke/ScrollMagic  
+There will be __no future versions__ of Superscrollorama and support will also focus on ScrollMagic.  
+So if you're starting a new project we strongly recommend to use ScrollMagic instead.
+
+## Contact
+
 [Follow me on Twitter](http://twitter.com/johnpolacek)
 
 Need help building your website? [Contact us](http://johnpolacek.com/contact/)
