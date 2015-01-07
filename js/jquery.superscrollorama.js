@@ -15,7 +15,7 @@
 
 	$.superscrollorama = function(options) {
 
-		var superscrollorama = this;
+		var superscrollorama = {};
 		var defaults = {
 			isVertical:true,		// are we scrolling vertically or horizontally?
 			triggerAtCenter: true,	// the animation triggers when the respective Element's origin is in the center of the scrollarea. This can be changed here to be at the edge (-> false)
