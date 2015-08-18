@@ -45,11 +45,13 @@
 		</p>
 	</div>
 
-	<p id="download">
-		<span class="accent">&#9733;</span> DOWNLOAD <span class="accent">&#9733;</span><br /> 
-		<a class="download" href="https://github.com/johnpolacek/superscrollorama/zipball/master">zip</a>
-		<a class="download" href="https://github.com/johnpolacek/superscrollorama/tarball/master">tar</a>
-	</p>
+	<div id="download">
+		<p><em>NOTE: SuperScrollorama is no longer under active development. ScrollMagic is the new hotness!</em><br /><a href="http://janpaepke.github.io/ScrollMagic/">Get ScrollMagic</a></p>
+		<p><span class="accent">&#9733;</span> DOWNLOAD <span class="accent">&#9733;</span><br />
+			<a class="download" href="https://github.com/johnpolacek/superscrollorama/zipball/master">zip</a>
+			<a class="download" href="https://github.com/johnpolacek/superscrollorama/tarball/master">tar</a>
+		</p>
+	</div>
 
 	<div id="showcase">
 		<h1>Showcase</h1>
@@ -382,7 +384,7 @@ controller.addTween('#fade',
 				<p><a href="http://greensock.com">Greensock Tweening Engine &amp; TweenMax</a> by <a href="http://greensock.com">Greensock</a></p>
 				<p><a href="http://letteringjs.com">Lettering.js</a> by <a href="http://daverupert.com">Dave Rupert</a></p>
 				<p><a href="http://www.google.com/fonts/specimen/Luckiest+Guy">Luckiest Guy Font</a> by <a href="https://profiles.google.com/astigmaticfonts/about">Astigmatic Fonts</a></p>
-				<p>John Polacek works at <a href="http://www.auctionsbycellular.com">AuctionsByCellular</a>, a <a href="http://www.auctionsbycellular.com/mobile-bidding/">mobile bidding</a> and <a href="http://www.auctionsbycellular.com/auction-software-fundraising-events/">auction software</a> company that <a href="http://www.auctionsbycellular.com/testimonials/">helps charities</a> raise more money.</p>
+				<p>John Polacek works at <a href="http://gesture.com">Gesture</a>, a <a href="http://gesture.com/mobile-bidding/">mobile bidding</a> and <a href="http://gesture.com/auction-software-fundraising-events/">auction software</a> company that <a href="http://gesture.com/testimonials/">helps charities</a> raise more money.</p>
 			</div>
 
 		</div>
@@ -419,7 +421,8 @@ controller.addTween('#fade',
 					TweenMax.from( $('#title-line3 .char5'), .25+Math.random(), {css:{top: '200px', left:'1000px'}, ease:Elastic.easeOut})
 				])
 				.from("#newversion", .4, {scale: 5, autoAlpha: 0, ease: Elastic.easeOut})
-				.to( $('#title-info'), .5, {css:{opacity:.99, 'margin-top':0}, delay:-1, ease:Quad.easeOut});
+				.to( $('#title-info'), .5, {css:{opacity:.99, 'margin-top':0}, delay:-1, ease:Quad.easeOut})
+				.to( $('#download'), .25, {autoAlpha:1});
 			
 			function initScrollAnimations() {
 				$('#content-wrapper').css('display','block');
@@ -574,7 +577,6 @@ controller.addTween('#fade',
 					1200,
 					-100 // offset for better timing
 				);
-
 			}
 		});
 	</script>

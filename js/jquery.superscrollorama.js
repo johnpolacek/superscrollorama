@@ -201,6 +201,7 @@
 							left: superscrollorama.settings.isVertical ? pinObjSpacerOffset.left : -pinObj.offset
 						};
 						el.css('position','fixed');
+						el.css('will-change','top');
 						el.css('top', pinObj.fixedPositioning.top);
 						el.css('left', pinObj.fixedPositioning.left);
 

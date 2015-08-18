@@ -72,7 +72,7 @@ figure > a, #newversion a, .banner {
 figcaption { text-shadow: 0 2px 1px #000; color: #C5C3DE; }
 
 ul { list-style: none; }
-.download { padding: 10px; }
+.download { margin: 16px; }
 
 pre { font-size: 15px; }
 code { font-style: normal; }
@@ -134,13 +134,13 @@ blockquote {
 	position: relative;
 	margin: 50px auto;
 	font-size: 18px;
-	width: 100%;
+	max-width: 800px;
+	width: 90%;
 	line-height: 1.8;
 	z-index: 99999;
+	visibility: hidden;
 }
 #hire { margin-bottom: 80px; }
-
-#download a { color: #69697A; border-bottom: none; text-decoration: underline; }
 
 #examples-1 { overflow: hidden; }
 #fly-it { position: relative; }
