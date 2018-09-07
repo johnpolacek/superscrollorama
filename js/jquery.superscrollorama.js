@@ -461,6 +461,15 @@
 			return superscrollorama;
 		};
 
+		superscrollorama.destroy = function() {
+	            	TweenLite.ticker.removeEventListener("tick", tickHandler);
+			for( var i = 0 ; i < animObjects.length ; i++ ) {
+				this.removeTween( animObjects[i].target );
+			}
+			for( var k = 0 ; k < pinnedObjects.length ; k++ ) {
+					this.removePin( pinnedObjects[k].target );
+			}
+		};
 
 		// INIT
 		init();
